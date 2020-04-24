@@ -166,6 +166,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RemovePackages
 
+# WiFi
+PRODUCT_PACKAGES += \
+    WifiOverlay
+
+# Rav_Overlay
 PRODUCT_PACKAGES += \
     MotoRav
 
