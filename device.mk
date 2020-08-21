@@ -130,6 +130,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     vndk_package
 
+# Tethering
+PRODUCT_PACKAGES += \
+    TetheringConfigOverlay
+
 PRODUCT_PACKAGES += \
     vendor.display.config@1.10 \
     libdisplayconfig \
