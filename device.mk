@@ -77,11 +77,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
-#PRODUCT_PACKAGES += \
-#    omni_charger_res_images \
-#    animation.txt \
-#    font_charger.png
-
 # HIDL
 PRODUCT_PACKAGES += \
     libhidltransport \
@@ -105,13 +100,7 @@ PRODUCT_CHARACTERISTICS := nosdcard
 
 # Camera
 PRODUCT_PACKAGES += \
-    SnapdragonCamera2
-
-PRODUCT_PACKAGES += \
-    libqcomfm_jni \
-    qcom.fmradio
-
-PRODUCT_BOOT_JARS += qcom.fmradio
+    Snap
 
 # ANT+
 #PRODUCT_PACKAGES += \
@@ -147,7 +136,7 @@ PRODUCT_PACKAGES += \
     libqdMetaData.system \
     libqdMetaData
 
-#Nfc
+# Nfc
 PRODUCT_PACKAGES += \
     android.hardware.nfc@1.0 \
     android.hardware.nfc@1.1 \

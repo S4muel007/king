@@ -21,18 +21,22 @@
 
 PRODUCT_EXTRA_VNDK_VERSIONS := 29
 
-VENDOR_EXCEPTION_PATHS := havoc \
+VENDOR_EXCEPTION_PATHS := lineage \
     motorola \
-    gapps \
-    microg
+    gapps
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 
-# Inherit some common HavocOS stuff
-$(call inherit-product, vendor/havoc/config/common_full_phone.mk)
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
+
+# Inherit some common Lineage stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_BUILD_SUPER_PARTITION := false
@@ -55,18 +59,16 @@ TARGET_NO_RECOVERY := false
 BOARD_BUILD_RETROFIT_DYNAMIC_PARTITIONS_OTA_PACKAGE := false
 BOARD_USES_RECOVERY_AS_BOOT := false
 
-# must be before including Lineage part
+# A/B
 AB_OTA_UPDATER := true
 
-DEVICE_PACKAGE_OVERLAYS += device/motorola/sofiar/overlay/device
-
-# Inherit from hardware-specific part of the product configuration
+# Inherit from Sofiar device
 $(call inherit-product, device/motorola/sofiar/device.mk)
 
 PRODUCT_SHIPPING_API_LEVEL := 29
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := havoc_sofiar
+# Device identifier. This must come after all inclusions.
+PRODUCT_NAME := lineage_sofiar
 PRODUCT_DEVICE := sofiar
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
@@ -75,15 +77,15 @@ PRODUCT_MODEL := moto g8 power
 TARGET_DEVICE := Moto G8 Power
 PRODUCT_SYSTEM_NAME := Moto G8 Power
 
+# Fingerprint
 VENDOR_RELEASE := 10/QPE30.79-25/59f4f:user/release-keys
 BUILD_FINGERPRINT := motorola/sofiar_retail/sofiar:$(VENDOR_RELEASE)
-#OMNI_BUILD_FINGERPRINT := motorola/sofiar_retail/sofiar:$(VENDOR_RELEASE)
-#OMNI_PRIVATE_BUILD_DESC := "'sofiar_retail-user 10 QPE30.79-25 59f4f release-keys'"
 
 PLATFORM_SECURITY_PATCH_OVERRIDE := 2019-12-01
 
 TARGET_VENDOR := motorola
 
+# Properties
 PRODUCT_PRODUCT_PROPERTIES += \
     debug.sf.enable_gl_backpressure=0 \
     debug.sf.enable_hwc_vds=0 \
@@ -97,8 +99,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
     ro.lmk.swap_free_low_percentage=20 \
     ro.lmk.swap_util_max=80 \
     ro.lmk.psi_complete_stall_ms=80
-    
+
+# Vendor Proprietary
 $(call inherit-product, vendor/motorola/sofiar/sofiar-vendor.mk)
 
-# Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+# BootAnimation
+TARGET_BOOT_ANIMATION_RES := 1080
+
+# Gapps
+TARGET_GAPPS_ARCH := arm64
