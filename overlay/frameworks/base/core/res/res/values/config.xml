@@ -222,7 +222,7 @@
         <item>15</item>
         <item>30</item>
         <item>15</item>
-    </string-array>
+    </integer-array>
 
     <integer-array name="config_virtualKeyVibePattern">
         <item>28</item>
