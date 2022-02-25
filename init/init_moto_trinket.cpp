@@ -77,7 +77,7 @@ void vendor_load_properties() {
     if (device == "sofia") {
         property_override("ro.build.description", "sofia_retail-user 10 QPMS30.80-94-2 604e5 release-keys");
         for (const auto &source : ro_props_default_source_order) {
-            set_ro_build_prop(source, "fingerprint", "motorola/sofia_retail/sofia:10/QPMS30.80-94-2/604e5:user/release-keys");
+            set_ro_build_prop(source, "fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
             set_ro_product_prop(source, "device", "sofia");
             set_ro_product_prop(source, "model", "moto g power");
             set_ro_product_prop(source, "name", "sofia_retail");
@@ -85,7 +85,7 @@ void vendor_load_properties() {
     } else if (device == "sofiap") {
         property_override("ro.build.description", "sofiap_retail-user 10 QPRS30.80-58-5 5f0ed release-keys");
         for (const auto &source : ro_props_default_source_order) {
-            set_ro_build_prop(source, "fingerprint", "motorola/sofiap_retail/sofiap:10/QPRS30.80-58-5/5f0ed:user/release-keys");
+            set_ro_build_prop(source, "fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
             set_ro_product_prop(source, "device", "sofiap");
             set_ro_product_prop(source, "model", "moto g stylus");
             set_ro_product_prop(source, "name", "sofiap_retail");
@@ -101,7 +101,7 @@ void vendor_load_properties() {
     } else if (device == "sofiap_ao" || device == "sofiap_sprout") {
         property_override("ro.build.description", "sofiap_ao-user 10 QPRS30.80-109-2-5 298f91 release-keys");
         for (const auto &source : ro_props_default_source_order) {
-            set_ro_build_prop(source, "fingerprint", "motorola/sofiap_ao/sofiap_sprout:10/QPRS30.80-109-2-5/298f91:user/release-keys");
+            set_ro_build_prop(source, "fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
             set_ro_product_prop(source, "device", "sofiap_sprout");
             set_ro_product_prop(source, "model", "moto g pro");
             set_ro_product_prop(source, "name", "sofiap_ao");
@@ -109,7 +109,7 @@ void vendor_load_properties() {
     } else if (device == "rav_t") {
         property_override("ro.build.description", "rav_t-user 10 QPJ30.131-61 95ac67 release-keys");
         for (const auto &source : ro_props_default_source_order) {
-            set_ro_build_prop(source, "fingerprint", "motorola/rav_t/rav:10/QPJ30.131-61/95ac67:user/release-keys");
+            set_ro_build_prop(source, "fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
             set_ro_product_prop(source, "device", "sofiap_sprout");
             set_ro_product_prop(source, "model", "moto g fast");
             set_ro_product_prop(source, "name", "rav_t");
@@ -117,7 +117,7 @@ void vendor_load_properties() {
     } else if (device == "rav") {
         property_override("ro.build.description", "rav_retail-user 10 QPJS30.63-35-1-9 2a90b release-keys");
         for (const auto &source : ro_props_default_source_order) {
-            set_ro_build_prop(source, "fingerprint", "motorola/rav_retail/rav:10/QPJS30.63-35-1-9/2a90b:user/release-keys");
+            set_ro_build_prop(source, "fingerprint", "google/walleye/walleye:8.1.0/OPM1.171019.011/4448085:user/release-keys");
             set_ro_product_prop(source, "device", "rav");
             set_ro_product_prop(source, "model", "moto g(8)");
             set_ro_product_prop(source, "name", "rav_t");
