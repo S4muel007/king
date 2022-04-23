@@ -102,6 +102,10 @@ PRODUCT_CHARACTERISTICS := nosdcard
 PRODUCT_PACKAGES += \
     Snap
 
+# NotchBarKiller
+PRODUCT_PACKAGES += \
+    NotchBarKiller
+
 # ANT+
 #PRODUCT_PACKAGES += \
 #    AntHalService
