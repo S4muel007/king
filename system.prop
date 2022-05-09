@@ -279,16 +279,6 @@ persist.sys.scrollingcache=4
 touch.pressure.scale=0
 debug.cpurend.vsync=false
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
-debug.sf.hw=0
-video.accelerate.hw=1
-debug.performance.tuning=1
-debug.composition.type=c2d
-persist.sys.composition.type=gpu
-debug.egl.hw=0
-hw3d.force=1
-hwui.render_dirty_regions=false
-debug.sf.recomputecrop=0
-dev.pm.dyn_samplingrate=1
 
 # Increase JPEG quality
 ro.media.enc.jpeg.quality=100
@@ -298,6 +288,15 @@ ro.config.nocheckin=1
 
 # Keep Launcher in Ram
 ro.HOME_APP_ADJ=1
+ro.config.fha_enable=true
+ro.sys.fw.bg_apps_limit=32
+ro.config.dha_cached_max=16
+ro.config.dha_empty_max=42
+ro.config.dha_empty_init=32
+ro.config.dha_lmk_scale=0.545
+ro.config.dha_th_rate=2.3
+ro.config.sdha_apps_bg_max=64
+ro.config.sdha_apps_bg_min=8
 
 # Less frequent WiFi search
 wifi.supplicant_scan_interval=360
