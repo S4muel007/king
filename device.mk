@@ -110,6 +110,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     MotCamera2
 
+# Moto TimeWeather
+PRODUCT_PACKAGES += \
+    TimeWeather
+
 # ANT+
 #PRODUCT_PACKAGES += \
 #    AntHalService
